@@ -24,12 +24,12 @@ public class Commands implements CommandExecutor, TabCompleter{
 		if(!(sender instanceof Player))
 			return true;
 		Player p = (Player) sender;
-		if(args.length<1) {
-			PlayerManager.toggle(p);
-			return true;
-		}
 		if(!p.hasPermission("superharvest.use")) {
 			p.sendMessage(Config.color(PlayerManager.getLang(p).perms));
+			return true;
+		}
+		if(args.length<1) {
+			PlayerManager.toggle(p);
 			return true;
 		}
 		switch(args[0].toLowerCase()) {
@@ -78,7 +78,7 @@ public class Commands implements CommandExecutor, TabCompleter{
 			langs.add("default");
 			return langs;
 		} else if (args.length == 1){
-			return Arrays.asList("toggle","farming","mining","logging","about","notify","mode","language");
+			return Arrays.asList("toggle","logging");
 		}
 		return Arrays.asList();
 
