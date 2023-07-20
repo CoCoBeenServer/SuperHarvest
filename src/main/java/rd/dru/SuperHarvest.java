@@ -1,15 +1,13 @@
 package rd.dru;
 
-import java.io.File;
-
-import org.bstats.bukkit.Metrics;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
-
 import rd.dru.config.Config;
 import rd.dru.nms.NMSHandler;
 import rd.dru.nms.VersionChecker;
 import rd.dru.thread.SafeThread;
+
+import java.io.File;
 
 /**
  * 
@@ -31,8 +29,8 @@ public class SuperHarvest extends JavaPlugin{
 		new EventManager();
 		getCommand("superharvest").setExecutor(new Commands());
 		
-		int pluginId = 15675; // <-- Replace with the id of your plugin!
-        new Metrics(this, pluginId);
+		//int pluginId = 15675; // <-- Replace with the id of your plugin!
+        //new Metrics(this, pluginId);
     	Bukkit.getLogger().info("SuperHarvest is enabled.");
 	}
 	

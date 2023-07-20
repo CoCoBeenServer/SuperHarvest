@@ -1,16 +1,14 @@
 package rd.dru;
 
+import org.bukkit.Location;
+import org.bukkit.block.Block;
+import org.bukkit.entity.Player;
+import rd.dru.PlayerManager.OptionType;
+
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
-
-import org.bukkit.Location;
-import org.bukkit.block.Block;
-import org.bukkit.entity.Player;
-
-import rd.dru.PlayerManager.OptionType;
-import rd.dru.config.Config;
 
 public class Helper {
 
