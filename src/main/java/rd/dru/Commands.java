@@ -30,6 +30,7 @@ public class Commands implements CommandExecutor, TabCompleter{
 		}
 		if(!p.hasPermission("superharvest.use")) {
 			p.sendMessage(Config.color(PlayerManager.getLang(p).perms));
+			return true;
 		}
 		switch(args[0].toLowerCase()) {
 		case "toggle":
